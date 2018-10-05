@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">glucListener</string>
+    <string name="low_bridge_battery">Low bridge battery</string>
+    <string name="transmitter_battery">transmitter battery</string>
+    <string name="parakeet_related_alerts">Parakeet related alerts</string>
+    <string name="reminders">Reminders</string>
+    <string name="glucose_alerts_settings">Glucose Alerts Settings</string>
+    <string name="missed_reading_alert">Missed reading Alert</string>
+    <string name="bg_rising_fast">Bg rising fast</string>
+    <string name="low_predicted">Low predicted</string>
+    <string name="persistent_high_alert">Persistent High Alert</string>
+    <string name="calibration_alerts">Calibration Alerts</string>
+    <string name="channel_name">glucValues</string>
+    <string name="channel_description">Glucose values from sensor reader</string>
+    <string name="prefs_dexcomTransmitterId">dex_txid</string>
+    <string name="prefs_websocketUriString">ws_uri</string>
+    <string name="prefs_demomodeinterval">interval</string>
+    <string name="prefs_singlevalue">singlevalue</string>
+</resources>

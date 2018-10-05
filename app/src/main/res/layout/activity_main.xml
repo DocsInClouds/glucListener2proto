@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:padding="10dp"
+  android:orientation="vertical">
+
+  <Space
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_weight="1"/>
+
+
+  <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:padding="25dp"
+    android:background="@drawable/border"
+    android:orientation="vertical">
+
+    <Switch
+      android:id="@+id/switchG5Service"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:paddingTop="10dp"
+      android:paddingBottom="10dp"
+      android:text="G5 mode"
+      android:textOff="Off"
+      android:textOn="On"/>
+    <Space
+      android:layout_width="wrap_content"
+      android:layout_height="10dp"/>
+    <Switch
+      android:id="@+id/switchDemomode"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:paddingTop="10dp"
+      android:paddingBottom="10dp"
+      android:switchPadding="20dp"
+      android:text="Demo Mode"
+      android:textColorLink="@color/colorAccent"
+      android:textOff="Off"
+      android:textOn="On"/>
+    <Space
+      android:layout_width="wrap_content"
+      android:layout_height="10dp"/>
+    <Switch
+      android:id="@+id/switchSingleValue"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="10dp"
+      android:paddingBottom="10dp"
+      android:switchPadding="20dp"
+      android:text="Manual Mode"
+      android:textOff="Off"
+      android:textOn="On"/>
+  </LinearLayout>
+  <Space
+    android:layout_width="wrap_content"
+    android:layout_height="50dp"
+    />
+  <TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
+
+    <TableRow
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="WebSocket Server:"/>
+      <EditText
+        android:id="@+id/websocketUri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textUri"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="ws://172.20.10.2:4568"
+        android:textAlignment="center"/>
+    </TableRow>
+    <TableRow
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="G5 Transmitter ID:"/>
+      <EditText
+        android:id="@+id/transmitterId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="transmitter id"
+        android:inputType="textNoSuggestions"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="407WPQ"
+        android:textAlignment="center"/>
+    </TableRow>
+    <TableRow
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="1">
+      <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Demo interval [sec]:"/>
+      <EditText
+        android:id="@+id/interval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="10"
+        android:textAlignment="center"/>
+    </TableRow>
+    <TableRow
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <TextView
+        android:layout_width="151dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Manual value [mg/dl]: "/>
+      <EditText
+        android:id="@+id/singleValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        android:ems="10"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="120"
+        android:textAlignment="center"/>
+      <Button
+        android:id="@+id/buttonSendSingleValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"/>
+    </TableRow>
+  </TableLayout>
+  <Space
+    android:layout_width="wrap_content"
+    android:layout_height="30dp"
+    />
+  <TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
+
+
+  </TableLayout>
+
+</LinearLayout>

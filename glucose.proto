@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package glucose;
+
+option java_package = "com.docsinclouds.glucose";
+option java_outer_classname = "GlucoseProtos";
+
+/* this contains one measurement of the glucose value.
+ * is never sent on its own, but only wrapped in RawValues */
+
+message SensorValue {
+	int32 value = 1;
+	string timestamp = 2;
+	string sensor_type = 3;
+}
+
+/* this contains one to many SensorValues. 
+ * Multiple values are interpreted as history transmission. 
+ * this is the only message type that is transmitted from 
+ * the smartphone to the server */ 
+ 
+message RawValues {
+	repeated SensorValue sensor_values = 1;
+}
+
+/* Wrapper message that can contain one of each message types
+ * defined in this file. All messages are transmitted inside 
+ * this type */
+
+message MetaMessage {
+	oneof content {
+		SensorValue sensor_value = 1;
+		RawValues raw = 2;
+	}
+}
